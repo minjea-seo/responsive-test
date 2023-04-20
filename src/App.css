@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+.logo {
+  background-color: gray;
+  width: 93px;
+  height: 20px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.whole{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 0 auto;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.divider{
+  background-color: lightgray;
+  height: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.leftNav{
+  height: 100vh;
+  background-image: url('../public/img/left-nav-test.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.bodyContainer{
+ 
+}
+.dock{
+  height: 200vh;
+  background-image: url('../public/img/dock-test.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.settings {
+  display: flex;
+  flex-direction: row;
+  gap:4rem;
+  flex-wrap: wrap;
+}
+header{
+  overflow: hidden;
+}
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  height: 10rem;
+}
+.cardWidthAdjustment{
+  width: 300px;
 }
