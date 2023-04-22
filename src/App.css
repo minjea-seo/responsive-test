@@ -1,14 +1,7 @@
 .logo {
-  background-color: gray;
   width: 93px;
   height: 20px;
 }
-.whole{
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
-}
-
 .divider{
   background-color: lightgray;
   height: 1px;
