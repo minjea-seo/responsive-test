@@ -11,6 +11,7 @@ function Card({cardWidth, layoutCase, currentLayout}) {
             className={`h-20 rounded-lg flex justify-center border-2 items-center ${(layoutCase<3)?'m-6 mt-2':'m-4 mt-2'} ${
                 (cardWidth===1136)? 'bg-red-400':
                 (cardWidth===976)? 'bg-blue-400':
+                (cardWidth===816)? 'bg-orange-400':
                 (cardWidth===736)? 'bg-green-400':
                 (cardWidth===704)? 'bg-purple-400':
                 'bg-gray-400'

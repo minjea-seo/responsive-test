@@ -41,24 +41,24 @@ function Content({cardsWidthSet, screenWidth, range, currentLayout,leftNavOpen, 
                 </div>
             ) 
         case 2:
-            setWholeSize(cardsWidth[1]+250+24+24)
+            setWholeSize(cardsWidth[2]+250+24+24)
             return(
                 <div className='flex justify-center'>
                     <Card
                     layoutCase={2}
                     currentLayout={currentLayout}
-                    cardWidth={cardsWidth[1]}/>
+                    cardWidth={cardsWidth[2]}/>
                     <Dock dockOpen={dockOpen}/>
                 </div>
             ) 
         case 3:
-            setWholeSize(cardsWidth[1]+16+16)
+            setWholeSize(cardsWidth[2]+16+16)
             return(
                 <div className='flex justify-center'>
                     <Card
                     layoutCase={3}
                     currentLayout={currentLayout}
-                    cardWidth={cardsWidth[1]}/>
+                    cardWidth={cardsWidth[2]}/>
                 </div>
             ) 
         case 4:

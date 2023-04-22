@@ -3,9 +3,10 @@ function caculateCardSize(layout, cardBaseSize,padding) {
         switch (page) {
             case 0:
                 const qspLargeSizeCard = cardBaseSize[0]
+                const qspLgToMidSizeCard = cardBaseSize[1] + 80
                 const qspMidSizeCard = cardBaseSize[1]
                 const qspSmSizeCardMax =  cardBaseSize[1] - padding[1] - padding[1]
-                const qspTempCardSize = [qspLargeSizeCard,qspMidSizeCard,qspSmSizeCardMax]
+                const qspTempCardSize = [qspLargeSizeCard, qspLgToMidSizeCard, qspMidSizeCard,qspSmSizeCardMax]
                 return qspTempCardSize
             case 1:
                 const homeLargeSizeCard = cardBaseSize[0] + 160 //left nav width
