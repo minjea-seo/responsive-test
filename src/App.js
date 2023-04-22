@@ -40,16 +40,16 @@ function App() {
   }, []);
 
   //Ref Container include everything
-  const wholeRef = useRef(1372);
+  const [wholeSize, setWholeSize] = useState(null)
   return (
     <div className="App">
       <Header
-        wholeWidth={(wholeRef)?wholeRef.current.offsetWidth:screenWidth}
+        wholeWidth={(wholeSize)?wholeSize:'Resize the screen'}
         currentLayout={currentLayout}
         setCurrentLayout={setCurrentLayout}
         screenWidth={screenWidth}
       />
-      <div ref={wholeRef}>
+      <div className='meow'>
       {(currentLayout===0?
          <Content
          screenWidth={screenWidth}
@@ -58,6 +58,7 @@ function App() {
          cardsWidthSet={cardsWidth}
          leftNavOpen={leftNavOpen}
          dockOpen={dockOpen}
+         setWholeSize={setWholeSize}
          />
       :
       <Content2
@@ -67,6 +68,7 @@ function App() {
          cardsWidthSet={cardsWidth}
          leftNavOpen={leftNavOpen}
          dockOpen={dockOpen}
+         setWholeSize={setWholeSize}
       />
       )}
       </div>

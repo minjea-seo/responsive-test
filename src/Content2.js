@@ -2,7 +2,7 @@ import React from 'react';
 import LeftNav from './LeftNav';
 import Dock from './Dock';
 import Card from './Card'
-function Content({cardsWidthSet, screenWidth, range, currentLayout,leftNavOpen, dockOpen}) {
+function Content({cardsWidthSet, screenWidth, range, currentLayout,leftNavOpen, dockOpen, setWholeSize}) {
     const cardsWidth = cardsWidthSet[currentLayout]
     const rangeHighBar = range.map(item=>item[0])
     const rangeLowBar = range.map(item=>item[1])
@@ -17,6 +17,7 @@ function Content({cardsWidthSet, screenWidth, range, currentLayout,leftNavOpen, 
     }
     switch (checkWhichRangeNow(screenWidth,rangeHighBar)) {
         case 0:
+            setWholeSize(cardsWidth[0]+250+24+24)
             return(
                 <div className='flex justify-center'>
                         <Card
@@ -26,6 +27,7 @@ function Content({cardsWidthSet, screenWidth, range, currentLayout,leftNavOpen, 
                 </div>
             ) 
         case 1:
+            setWholeSize(cardsWidth[1]+250+24+24)
             return(
                 <div className='flex justify-center'>
                 <Card
@@ -35,6 +37,7 @@ function Content({cardsWidthSet, screenWidth, range, currentLayout,leftNavOpen, 
                 </div>
             ) 
         case 2:
+            setWholeSize(cardsWidth[2]+250+24+24)
             return(
                 <div className='flex justify-center'>
                     <Card
@@ -44,6 +47,7 @@ function Content({cardsWidthSet, screenWidth, range, currentLayout,leftNavOpen, 
                 </div>
             ) 
         case 3:
+            setWholeSize(cardsWidth[2]+16+16)
             return(
                 <div className='flex justify-center'>
                     <Card
@@ -52,6 +56,7 @@ function Content({cardsWidthSet, screenWidth, range, currentLayout,leftNavOpen, 
                 </div>
             ) 
         case 4:
+            setWholeSize(screenWidth-16-16)
             return(
                 <div className='flex justify-center'>
                     <Card
